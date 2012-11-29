@@ -37,7 +37,8 @@ module OAuth::Client
         'oauth_nonce'            => nonce,
         'oauth_verifier'         => options[:oauth_verifier],
         'oauth_version'          => (options[:oauth_version] || '1.0'),
-        'oauth_session_handle'   => options[:oauth_session_handle]
+        'oauth_session_handle'   => options[:oauth_session_handle],
+        'scope'                  => options[:scope]
       }.reject { |k,v| v.to_s == "" }
     end
 
